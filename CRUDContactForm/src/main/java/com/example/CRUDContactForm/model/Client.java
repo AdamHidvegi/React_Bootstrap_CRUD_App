@@ -11,8 +11,14 @@ public class Client {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "name")
-    private String name;
+    @Column(name = "first_name")
+    private String first_name;
+
+    @Column(name = "last_name")
+    private String last_name;
+
+    @Column(name = "username")
+    private String username;
 
     @Column(name = "email")
     private String email;
@@ -20,17 +26,15 @@ public class Client {
     @Column(name = "phone_number")
     private String phone_number;
 
-    @Column(name = "domain")
-    private String domain;
-
     @Column(name = "notes")
     private String notes;
 
-    public Client(String name, String email, String phone_number, String domain, String notes) {
-        this.name = name;
+    public Client(String first_name, String last_name, String username, String email, String phone_number, String notes) {
+        this.first_name = first_name;
+        this.last_name = last_name;
+        this.username = username;
         this.email = email;
         this.phone_number = phone_number;
-        this.domain = domain;
         this.notes = notes;
     }
 
@@ -46,12 +50,28 @@ public class Client {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirst_name() {
+        return first_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
+    }
+
+    public String getLast_name() {
+        return last_name;
+    }
+
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
@@ -68,14 +88,6 @@ public class Client {
 
     public void setPhone_number(String phone_number) {
         this.phone_number = phone_number;
-    }
-
-    public String getDomain() {
-        return domain;
-    }
-
-    public void setDomain(String domain) {
-        this.domain = domain;
     }
 
     public String getNotes() {

@@ -7,10 +7,11 @@ export default function ClientList({clients}) {
   const clientDetail = clients.map((data, index) => {
     return(
       <tr key={index}>
-        <td>{data.name}</td>
+        <td>{data.first_name}</td>
+        <td>{data.last_name}</td>
+        <td>{data.username}</td>
         <td>{data.email}</td>
         <td>{data.phone_number}</td>
-        <td>{data.domain}</td>
         <td>{data.notes}</td>
         <td><Button>Edit</Button> <Button>Delete</Button></td>
       </tr>
@@ -23,10 +24,11 @@ export default function ClientList({clients}) {
         <Table bordered>
         <thead>
           <tr>
-            <th>Name</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
             <th>E-mail</th>
             <th>Phone number</th>
-            <th>Domain</th>
             <th>Notes</th>
             <th>Options</th>
           </tr>

@@ -19,7 +19,7 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args) {
 
-        Client client1 = new Client("Adam Hidvegi", "blabla@gmail.com", "07400175591", "http://localhost:3001/", "notes");
+        Client client1 = new Client("Adam", "Hidvegi", "adamH", "blabla@gmail.com", "01234567", "notes");
         clientRepository.save(client1);
 
     }
